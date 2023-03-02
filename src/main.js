@@ -18,13 +18,13 @@ import VMdPreview from "@/plugins/markdownPreview.js"
 
 const app = createApp(App)
 const pinia = createPinia()
+app.use(pinia)
 app.use(VMdPreviewHtml);
 app.use(VMdPreview);
 app.use(VueMarkdownEditor);
  app.use(router)
  app.use(VueParticles)
  app.use(CommonFunction)
- app.use(pinia)
 //  app.config.warnHandler = (msg, instance, trace) => {}
  app.mount('#app')
  app.provide('$axios',axios)
